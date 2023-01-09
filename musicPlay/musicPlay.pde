@@ -7,16 +7,23 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
 //Global Variables
+float appWidth, appHeight;
 Minim minim; //creates object to access all functions
 AudioPlayer song1; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 //
 void setup () {
-  //size(500, 600); //Remind you of Display Geometry
+  size(800, 600); //Remind you of Display Geometry
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
-  song1 = minim.loadFile("../FreeWare Music/MusicDownload/groove.mp3");//able to pass absolute path, file name & extension, and URL
+  song1 = minim.loadFile("../Audio/groove.mp3");//able to pass absolute path, file name & extension, and URL
+  populationSetup();
+  textSetup();
 }//End setup
 //
 void draw() {
+  playButton();
+  quitButton();
+  pauseButton();
+  resetButton();
 }//End draw
 //
 void keyPressed() {
