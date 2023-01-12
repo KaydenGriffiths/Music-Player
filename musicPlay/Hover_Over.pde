@@ -3,7 +3,10 @@ void playHoverOver() {
     fill(green);
     rect( playX, playY, playWidth, playHeight );
     noFill();
-    triangle(pl
+    //
+    fill(white);
+    triangle( playX+playWidth/2-appWidth/40, playY, playX+playWidth/2-appWidth/40, playY+playHeight, playX+playWidth/2+appWidth/40, playY+playHeight/2);
+    noFill();
   } else {  
     fill(green);
     rect( playX, playY, playWidth, playHeight );
@@ -29,6 +32,11 @@ void nextHoverOver() {
   if (mouseX>=nextX && mouseX<=nextX+nextWidth && mouseY>=nextY && mouseY<=nextY+nextHeight) {
     fill(black);
     rect( nextX, nextY, nextWidth, nextHeight);
+    noFill();
+    
+    fill(white);
+    triangle(nextX+nextWidth/2-appWidth/20, nextY, nextX+nextWidth/2-appWidth/20, nextY+nextHeight, nextX+nextWidth/2, nextY+nextHeight/2);
+    triangle(nextX+nextWidth/2, nextY, nextX+nextWidth/2, nextY+nextHeight, nextX+nextWidth/2+appWidth/20, nextY+nextHeight/2);
     noFill();
   } else {  
     fill(black);

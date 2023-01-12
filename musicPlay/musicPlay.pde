@@ -12,9 +12,10 @@ Minim minim; //creates object to access all functions
 AudioPlayer song1; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 //
 void setup () {
-  size(1200, 900); //Remind you of Display Geometry
-  minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
-  song1 = minim.loadFile("../Audio/groove.mp3");//able to pass absolute path, file name & extension, and URL
+  //size(displayWidth, displayHeight); 
+  fullScreen();
+  minim = new Minim(this); 
+  song1 = minim.loadFile("../Audio/groove.mp3");
   populationSetup();
   textSetup();
 }//End setup
