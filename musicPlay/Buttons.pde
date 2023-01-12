@@ -7,37 +7,23 @@ float nextX, nextY, nextWidth, nextHeight;
 color green=#00FF00, red=#FF0000, teal=#00ECFF, blue=#00009B, black=#000000;
 //
 void playButton() {
-  fill(green);
-  rect( playX, playY, playWidth, playHeight );
-  noFill();
-  playButtonText();
+  playHoverOver();
 }//End play
 //
 void quitButton() {
-  fill(red);
-  rect( quitX, quitY, quitWidth, quitHeight );
-  noFill();
-  quitButtonText();
+  quitHoverOver();
 }//End play
 //
 void pauseButton() {
-  fill(teal);
-  rect( pauseX, pauseY, pauseWidth, pauseHeight );
-  noFill();
-  pauseButtonText();
+  pauseHoverOver(); 
 }//End pause
 //
 void resetButton() {
-  fill(blue);
-  rect( resetX, resetY, resetWidth, resetHeight );
-  noFill();
-  resetButtonText();
+  resetHoverOver();
 }//End reset
 //
 void nextButton() {
-  fill(black);
-  rect( nextX, nextY, nextWidth, nextHeight);
-  nextButtonText();
+  nextHoverOver();
 }//End next
 //
 //
