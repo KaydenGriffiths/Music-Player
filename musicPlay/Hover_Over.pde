@@ -20,6 +20,7 @@ void quitHoverOver() {
     fill(red);
     rect( quitX, quitY, quitWidth, quitHeight );
     noFill();
+    quitHoverOverText();
   } else {
     fill(red);
     rect( quitX, quitY, quitWidth, quitHeight );
@@ -33,7 +34,6 @@ void nextHoverOver() {
     fill(black);
     rect( nextX, nextY, nextWidth, nextHeight);
     noFill();
-    
     fill(white);
     triangle(nextX+nextWidth/2-appWidth/20, nextY, nextX+nextWidth/2-appWidth/20, nextY+nextHeight, nextX+nextWidth/2, nextY+nextHeight/2);
     triangle(nextX+nextWidth/2, nextY, nextX+nextWidth/2, nextY+nextHeight, nextX+nextWidth/2+appWidth/20, nextY+nextHeight/2);
@@ -46,23 +46,15 @@ void nextHoverOver() {
   }
 }//End nextHoverOver
 //
-void resetHoverOver() {
-  if (mouseX>=resetX && mouseX<=resetX+resetWidth && mouseY>=resetY && mouseY<=resetY+resetHeight) {
-    fill(blue);
-    rect( resetX, resetY, resetWidth, resetHeight );
-    noFill();
-  } else {
-    fill(blue);
-    rect( resetX, resetY, resetWidth, resetHeight );
-    noFill();
-    resetButtonText();
-  }
-}//End resetHoverOver
-//
 void pauseHoverOver() {
   if (mouseX>=pauseX && mouseX<=pauseX+pauseWidth && mouseY>=pauseY && mouseY<=pauseY+pauseHeight) {
     fill(teal);
     rect( pauseX, pauseY, pauseWidth, pauseHeight );
+    noFill();
+    
+    fill(black);
+    rect(pauseX+pauseWidth/2+appWidth/10, pauseY, appWidth/50, appHeight/10);
+    rect(pauseX+pauseWidth/20+appWidth/10, pauseY, appWidth/50, appHeight/10 );
     noFill();
   } else {
     fill(teal);
@@ -71,3 +63,5 @@ void pauseHoverOver() {
     pauseButtonText();
   }
 }//End pauseHoverOver
+//
+//End Buttons

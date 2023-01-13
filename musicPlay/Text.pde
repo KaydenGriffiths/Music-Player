@@ -19,8 +19,8 @@ void quitButtonText() {
   fill(black);
   textAlign(CENTER, CENTER);
   textFont(arial, size);
-  String playText="Quit";
-  text(playText, quitX, quitY, quitWidth, quitHeight);
+  String quitText="Quit";
+  text(quitText, quitX, quitY, quitWidth, quitHeight);
   noFill();
 }//End quitText
 
@@ -28,8 +28,8 @@ void pauseButtonText() {
   fill(black);
   textAlign(CENTER, CENTER);
   textFont(arial, size);
-  String playText="Pause";
-  text(playText, pauseX, pauseY, pauseWidth, pauseHeight);
+  String pauseText="Pause";
+  text(pauseText, pauseX, pauseY, pauseWidth, pauseHeight);
   noFill();
 }//End pauseText
 
@@ -37,8 +37,8 @@ void nextButtonText() {
   fill(white);
   textAlign(CENTER, CENTER);
   textFont(arial, size);
-  String playText="Next";
-  text(playText, nextX, nextY, nextWidth, nextHeight);
+  String nextText="Next";
+  text(nextText, nextX, nextY, nextWidth, nextHeight);
   noFill();
 }//End nextText
 
@@ -46,9 +46,16 @@ void resetButtonText() {
   fill(black);
   textAlign(CENTER, CENTER);
   textFont(arial, size);
-  String playText="Reset";
-  text(playText, resetX, resetY, resetWidth, resetHeight);
+  String resetText="Reset";
+  text(resetText, resetX, resetY, resetWidth, resetHeight);
   noFill();
 }//End resetText
 //
+void quitHoverOverText() {
+  fill(black);
+  textAlign(CENTER,CENTER);
+  textFont(arial, size);
+  String quitText="Bye!";
+  text(quitText, quitX, quitY, quitWidth, quitHeight);
+}
 //End Text Subprogram

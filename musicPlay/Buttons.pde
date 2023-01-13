@@ -19,7 +19,10 @@ void pauseButton() {
 }//End pause
 //
 void resetButton() {
-  resetHoverOver();
+    fill(blue);
+    rect( resetX, resetY, resetWidth, resetHeight );
+    noFill();
+    resetButtonText();
 }//End reset
 //
 void nextButton() {
