@@ -18,6 +18,7 @@ void setup () {
   song1 = minim.loadFile("../Audio/groove.mp3");
   populationSetup();
   textSetup();
+  imagePopulation();
 }//End setup
 //
 void draw() {

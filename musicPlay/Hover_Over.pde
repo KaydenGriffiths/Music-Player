@@ -52,9 +52,9 @@ void pauseHoverOver() {
     rect( pauseX, pauseY, pauseWidth, pauseHeight );
     noFill();
     
-    fill(black);
-    rect(pauseX+pauseWidth/2+appWidth/10, pauseY, appWidth/50, appHeight/10);
-    rect(pauseX+pauseWidth/20+appWidth/10, pauseY, appWidth/50, appHeight/10 );
+    fill(white);
+    rect(pauseX+pauseWidth/2+appWidth/50, pauseY, appWidth/50, appHeight/10);
+    rect(pauseX+pauseWidth/50+appWidth/7, pauseY, appWidth/50, appHeight/10 );
     noFill();
   } else {
     fill(teal);
