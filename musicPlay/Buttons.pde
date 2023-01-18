@@ -15,14 +15,11 @@ void quitButton() {
 }//End play
 //
 void pauseButton() {
-  pauseHoverOver(); 
+  pauseHoverOver();
 }//End pause
 //
 void resetButton() {
-    fill(blue);
-    rect( resetX, resetY, resetWidth, resetHeight );
-    noFill();
-    resetButtonText();
+  resetHoverOver();
 }//End reset
 //
 void nextButton() {
@@ -33,7 +30,9 @@ void nextButton() {
 //
 //  - -Buttons pressed- -
 void playButtonPressed() {
-  if (mouseX>=playX && mouseX<=playX+playWidth && mouseY>=playY && mouseY<=playY+playHeight);
+  if (mouseX>=playX && mouseX<=playX+playWidth && mouseY>=playY && mouseY<=playY+playHeight) {
+    song1.play();
+  }
 }//End playPressed
 //
 void quitButtonPressed() {
@@ -41,17 +40,23 @@ void quitButtonPressed() {
     exit();
   }
 }//End quitPressed
-//
+// 
 void nextButtonPressed() {
   if (mouseX>=nextX && mouseX<=nextX+nextWidth && mouseY>=nextY && mouseY<=nextY+nextHeight);
 }//End nextPressed
 //
 void pauseButtonPressed() {
-  if (mouseX>=pauseX && mouseX<=pauseX+pauseWidth && mouseY>=pauseY && mouseY<=pauseY+pauseHeight);
+  if (mouseX>=pauseX && mouseX<=pauseX+pauseWidth && mouseY>=pauseY && mouseY<=pauseY+pauseHeight) {
+    if ( song1.isPlaying() ) {
+      song1.pause();
+    }
+  }
 }//End pausePressed
 //
 void resetButtonPressed() {
-  if (mouseX>=resetX && mouseX<=resetX+resetWidth && mouseY>=resetY && mouseY<=resetY+resetHeight);
+  if (mouseX>=resetX && mouseX<=resetX+resetWidth && mouseY>=resetY && mouseY<=resetY+resetHeight) {
+    song1.skip(-1000000000); //A morbillion seconds
+  }
 }//End resetButtonPressed
 //
 //End Buttons Subprogram

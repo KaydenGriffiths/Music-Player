@@ -46,7 +46,7 @@ void resetButtonText() {
   fill(black);
   textAlign(CENTER, CENTER);
   textFont(arial, size);
-  String resetText="Reset";
+  String resetText="Rewind";
   text(resetText, resetX, resetY, resetWidth, resetHeight);
   noFill();
 }//End resetText

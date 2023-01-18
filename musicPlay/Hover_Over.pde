@@ -1,3 +1,7 @@
+float centerX=appWidth*1/2;
+float resetX_whiteScreen = centerX - appWidth * 1/15;
+float resetWidth_whiteScreen = appWidth * 1/8;
+
 void playHoverOver() {
   if (mouseX>=playX && mouseX<=playX+playWidth && mouseY>=playY && mouseY<=playY+playHeight) {
     fill(green);
@@ -51,7 +55,7 @@ void pauseHoverOver() {
     fill(teal);
     rect( pauseX, pauseY, pauseWidth, pauseHeight );
     noFill();
-    
+
     fill(white);
     rect(pauseX+pauseWidth/2+appWidth/50, pauseY, appWidth/50, appHeight/10);
     rect(pauseX+pauseWidth/50+appWidth/7, pauseY, appWidth/50, appHeight/10 );
@@ -64,4 +68,26 @@ void pauseHoverOver() {
   }
 }//End pauseHoverOver
 //
+void resetHoverOver() {
+  if (mouseX>=resetX && mouseX<=resetX+resetWidth && mouseY>=resetY && mouseY<=resetY+resetHeight) {
+    fill(blue);
+    noStroke();
+    float centerX=appWidth*1/2;
+    float quitX_whiteScreen = centerX - appWidth ;
+    float quitWidth_whiteScreen = appWidth * 1/3;
+    rect( resetX, resetY, quitWidth, resetHeight );
+    strokeWeight(1); //Reset: 1 pixel
+    noFill();
+    resetButtonImage();
+  }
+    fill(blue);
+    noStroke();
+    float centerX=appWidth*1/2;
+    float quitX_whiteScreen = centerX - appWidth ;
+    float quitWidth_whiteScreen = appWidth * 1/3;
+    rect( resetX, resetY, quitWidth_whiteScreen, resetHeight );
+    strokeWeight(1); //Reset: 1 pixel
+    noFill();
+    resetButtonText();
+}
 //End Buttons
