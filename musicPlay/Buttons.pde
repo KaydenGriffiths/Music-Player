@@ -4,8 +4,6 @@ float pauseX, pauseY, pauseWidth, pauseHeight;
 float resetX, resetY, resetWidth, resetHeight;
 float nextX, nextY, nextWidth, nextHeight;
 //
-color green=#00FF00, red=#FF0000, teal=#00ECFF, blue=#00009B, black=#000000;
-//
 void playButton() {
   playHoverOver();
 }//End play
@@ -19,7 +17,15 @@ void pauseButton() {
 }//End pause
 //
 void resetButton() {
-  resetHoverOver();
+  if (nightMode) {
+    fill(darkBlue);
+  } else {
+    fill(blue);
+  }
+  rect( resetX, resetY, resetWidth, resetHeight );
+  strokeWeight(1); //Reset: 1 pixel
+  noFill();
+  rewindButtonText();
 }//End reset
 //
 void nextButton() {

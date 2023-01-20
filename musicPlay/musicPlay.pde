@@ -9,6 +9,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 float appWidth, appHeight;
 float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
+boolean nightMode=false;
 Minim minim; //creates object to access all functions
 AudioPlayer song1; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 //
@@ -28,7 +29,7 @@ void draw() {
   quitButton();
   pauseButton();
   resetButton();
-  nextButton();
+  //nextButton();
   cursorDrawn();
 }//End draw
 //
@@ -52,6 +53,11 @@ void keyPressed() {
       song1.rewind(); //Not playing means song is paused or song position is at the end of the file
     }
   }//End STOP Button
+  //
+  // -- Night Mode Time --
+  if ( key=='N' || key=='n') nightMode=true;
+  if ( key=='D' || key=='d') nightMode=false;
+  //End Night Mode
 }//End keyPressed
 //
 void mouseClicked() {

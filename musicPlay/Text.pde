@@ -42,7 +42,7 @@ void nextButtonText() {
   noFill();
 }//End nextText
 
-void resetButtonText() {
+void rewindButtonText() {
   fill(black);
   textAlign(CENTER, CENTER);
   textFont(arial, size);
